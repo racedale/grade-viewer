@@ -3,7 +3,7 @@ import { navigate } from "gatsby"
 import { handleLogin, isLoggedIn } from "../services/auth"
 class Login extends React.Component {
   state = {
-    username: ``,
+    email: ``,
     password: ``,
   }
   handleUpdate = event => {
@@ -31,7 +31,7 @@ class Login extends React.Component {
         >
           <label>
             Email
-            <input type="text" name="username" onChange={this.handleUpdate} />
+            <input type="text" name="email" onChange={this.handleUpdate} />
           </label>
           <label>
             Password

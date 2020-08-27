@@ -5,8 +5,9 @@ export const getUser = () =>
     : {}
 const setUser = user =>
   window.localStorage.setItem("gatsbyUser", JSON.stringify(user))
-export const handleLogin = ({ username, password }) => {
-  if (username === process.env.GATSBY_USERNAME && password === process.env.GATSBY_PASSWORD) {
+export const handleLogin = ({ email, password }) => {
+  console.log(email)
+  if (email.toLowerCase() === process.env.GATSBY_USERNAME && password === process.env.GATSBY_PASSWORD) {
     return setUser({
       name: `app`,
     })
