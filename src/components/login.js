@@ -30,7 +30,7 @@ class Login extends React.Component {
           }}
         >
           <label>
-            Username
+            Email
             <input type="text" name="username" onChange={this.handleUpdate} />
           </label>
           <label>
