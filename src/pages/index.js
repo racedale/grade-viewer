@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import Login from "../components/Login"
+import Login from "../components/login"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
