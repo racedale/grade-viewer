@@ -23,9 +23,9 @@ const IndexPage = () => {
             columnGap: `0.15rem`,
           }}
         >
-          <Image filename="grades/mia.png" />
-          <Image filename="grades/aaron.png" />
-          <Image filename="grades/lucas.png" />
+          <Image filename="mia.png" />
+          <Image filename="aaron.png" />
+          <Image filename="lucas.png" />
         </div>
       )}
     </Layout>

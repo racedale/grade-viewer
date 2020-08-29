@@ -30,9 +30,10 @@ module.exports = {
     {
       resolve: `gatsby-source-s3-image`,
       options: {
-        // accessKeyId: process.env.GATSBY_ACCESS_KEY_ID,
-        // secretAccessKey: process.env.GATSBY_SECRET_ACCESS_KEY,
+        accessKeyId: process.env.GATSBY_ACCESS_KEY_ID,
+        secretAccessKey: process.env.GATSBY_SECRET_ACCESS_KEY,
         bucketName: `wentzville-school-grades-382220085659`,
+        region: 'us-east-2'
         // domain: null,
       },
     }
