@@ -21,6 +21,20 @@ const Image = props => {
     }
   `)
 
+  const photographyQuery = graphql`
+    {
+      allS3ImageAsset {
+        edges {
+          node {
+            ETag
+            Key
+          }
+        }
+      }
+    }
+  `
+  console.log(photographyQuery)
+
   const image = data.images.edges.find(n => {
     return n.node.relativePath.includes(props.filename)
   })
