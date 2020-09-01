@@ -27,6 +27,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-s3-image`,
+      options: {
+        accessKeyId: process.env.GATSBY_ACCESS_KEY_ID,
+        secretAccessKey: process.env.GATSBY_SECRET_ACCESS_KEY,
+        bucketName: `wentzville-school-grades-382220085659`,
+        region: 'us-east-2'
+        // domain: null,
+      },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

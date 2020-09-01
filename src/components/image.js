@@ -5,11 +5,10 @@ import Img from "gatsby-image"
 const Image = props => {
   const data = useStaticQuery(graphql`
     query {
-      images: allFile {
+      images: allS3ImageAsset {
         edges {
           node {
-            relativePath
-            name
+            Key
             childImageSharp {
               sizes(maxWidth: 600) {
                 ...GatsbyImageSharpSizes
@@ -21,8 +20,23 @@ const Image = props => {
     }
   `)
 
+  // export const photographyQuery = graphql`
+  //   query {
+  //     allS3ImageAsset {
+  //       edges {
+  //         node {
+  //           Key
+  //         }
+  //       }
+  //     }
+  //   }
+  // `
+  // console.log("photographyQuery", typeof photographyQuery, photographyQuery)
+  console.log("images", typeof data, data)
+
   const image = data.images.edges.find(n => {
-    return n.node.relativePath.includes(props.filename)
+    console.log(n)
+    return n.node.Key.includes(props.filename)
   })
 
   if (!image) {
